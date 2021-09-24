@@ -28,7 +28,6 @@ namespace InGameTestTask.Profiles
                     {
                         opt.PreCondition(src => src.IsFieldPresent(nameof(src.Books)));
                         opt.ConvertUsing<IntConverter<Book>, List<int>>();
-                        opt.MapFrom((src, dest) => dest.Books );
                     });
             
             CreateMap<Author, ReadAuthorDto>();
